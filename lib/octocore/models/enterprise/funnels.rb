@@ -15,7 +15,7 @@ module Octo
     belongs_to :enterprise, class_name: 'Octo::Enterprise'
 
     key :name_slug, String
-    many :funnel, String
+    key :funnel, Array
 
     key :name, String
     key :active, Boolean
@@ -90,7 +90,7 @@ module Octo
     # @return [Octo::FunnelData] The Octo funnel data
     def data(ts = Time.now.floor)
       args = {
-        enterprise_id: self.enterprise.id,
+        enterprise_id: self.enterprise._id,
         funnel_slug: self.name_slug,
         ts: ts
       }

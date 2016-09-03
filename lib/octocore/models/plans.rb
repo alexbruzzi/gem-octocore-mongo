@@ -8,7 +8,7 @@ module Octo
     include MongoMapper::Document
     include Octo::Record
 
-    key :id, Integer
+    key :_id, Integer
     key :active, Boolean
 
     key :name, String

@@ -29,8 +29,8 @@ module Octo
 
     def self.fakedata(user, ts)
       args = {
-        user_enterprise_id: user.enterprise.id,
-        user_id: user.id,
+        user_enterprise_id: user.enterprise._id,
+        user_id: user._id,
         ts: ts
       }
       res = self.where(args)

@@ -8,14 +8,14 @@ module Octo
 
     belongs_to :enterprise, class_name: 'Octo::Enterprise'
 
-    key :id, Integer
+    key :_id, Integer
 
     key :price, Float
     key :name, String
     key :routeurl, String
 
-    many :categories, String
-    many :tags, String
+    key :categories, Array
+    key :tags, Array
 
     timestamps!
   end

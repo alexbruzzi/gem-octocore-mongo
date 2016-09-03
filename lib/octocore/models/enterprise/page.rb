@@ -8,8 +8,8 @@ module Octo
 
     key :routeurl, String
 
-    many :categories, String
-    many :tags, String
+    key :categories, Array
+    key :tags, Array
   end
 end
 

@@ -15,7 +15,7 @@ module Octo
     key :segment_slug, String  # Using key as segment name's slug
 
     key :ts, Time    # The timestamp at which data is collected
-    many :value, Float       # List of values containing data collected
+    key :value, Array       # List of values containing data collected
 
   end
 end

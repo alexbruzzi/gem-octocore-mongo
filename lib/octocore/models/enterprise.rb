@@ -7,7 +7,7 @@ module Octo
     # Set ttl of 120 minutes for the caches
     TTL = 120
 
-    key :_id, ObjectId, auto: true, required: true
+    key :_id, ObjectId, auto: true
     key :name, String
 
     has_many :users, class_name: 'Octo::User'
@@ -39,7 +39,7 @@ module Octo
       if templates
         templates.each do |t|
           args = {
-            enterprise_id: self.id,
+            enterprise_id: self._id,
             category_type: t[:name],
             template_text: t[:text],
             active: true
@@ -56,7 +56,7 @@ module Octo
       if segments
         segments.each do |seg|
           args = {
-            enterprise_id: self.id,
+            enterprise_id: self._id,
             name: seg[:name],
             type: seg[:type].constantize,
             dimensions: seg[:dimensions].collect(&:constantize),

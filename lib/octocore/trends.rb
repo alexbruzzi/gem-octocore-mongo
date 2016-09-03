@@ -71,7 +71,7 @@ module Octo
 
     # Define the class for which trends shall be found
     def trend_for(klass)
-      unless klass.constantize.ancestors.include?Cequel::Record
+      unless klass.constantize.ancestors.include?MongoMapper::Document
         raise ArgumentError, "Class #{ klass } does not represent a DB Model"
       else
         @trend_for = klass

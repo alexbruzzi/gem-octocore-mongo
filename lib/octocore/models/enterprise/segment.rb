@@ -20,10 +20,10 @@ module Octo
     key :type, Integer          # Type of segment
     key :event_type, String   # Event Type used for events segmentation
 
-    many :dimensions, Integer      # list storing dimensions used
-    many :operators, Integer       # list storing operators on dimensions
-    many :dim_operators, Integer   # list storing operators between dimensions
-    many :values, String         # list of values for operations on dimensions
+    key :dimensions, Array      # list storing dimensions used
+    key :operators, Array       # list storing operators on dimensions
+    key :dim_operators, Array   # list storing operators between dimensions
+    key :values, Array         # list of values for operations on dimensions
 
     timestamps!                  # The usual housekeeping thing
 
@@ -40,7 +40,7 @@ module Octo
 
     def data(ts = Time.now.floor)
       args = {
-        enterprise_id: self.enterprise.id,
+        enterprise_id: self.enterprise._id,
         segment_slug: self.name_slug,
         ts: ts
       }
@@ -56,7 +56,7 @@ module Octo
     end
 
     def self.find_by_enterprise_and_name(enterprise, name)
-      where({enterprise_id: enterprise.id, name_slug: name.to_slug})
+      where({enterprise_id: enterprise._id, name_slug: name.to_slug})
     end
 
 

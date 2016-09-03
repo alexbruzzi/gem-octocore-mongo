@@ -15,7 +15,7 @@ module Octo
 
     key :ts, Time
 
-    many :value, Integer
+    key :value, Array
 
     class << self
 

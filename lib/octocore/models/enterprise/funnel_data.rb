@@ -13,7 +13,7 @@ module Octo
     key :funnel_slug, String
 
     key :ts, Time
-    many :value, Float
+    key :value, Array
 
   end
 end
