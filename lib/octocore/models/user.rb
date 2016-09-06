@@ -5,11 +5,9 @@ module Octo
     include MongoMapper::Document
     belongs_to :enterprise, class_name: 'Octo::Enterprise'
 
-    key :_id, Integer
-
     timestamps!
 
-    has_many :user_location_histories
+    many :user_location_histories, class_name: 'Octo::UserLocationHistory'
   end
 end
 
