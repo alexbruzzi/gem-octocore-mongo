@@ -7,14 +7,13 @@ module Octo
     # Set ttl of 120 minutes for the caches
     TTL = 120
 
-    key :_id, ObjectId, auto: true
     key :name, String
 
-    has_many :users, class_name: 'Octo::User'
-    has_many :segments, class_name: 'Octo::Segment'
-    has_many :templates, class_name: 'Octo::Template'
-    has_many :funnels, class_name: 'Octo::Funnel'
-    has_many :conversions, class_name: 'Octo::Conversions'
+    many :users, class_name: 'Octo::User'
+    many :segments, class_name: 'Octo::Segment'
+    many :templates, class_name: 'Octo::Template'
+    many :funnels, class_name: 'Octo::Funnel'
+    many :conversions, class_name: 'Octo::Conversions'
 
     after_save :_setup
 

@@ -1,4 +1,4 @@
-require 'cequel/record'
+require 'mongo_mapper'
 
 module Octo
 

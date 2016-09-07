@@ -4,7 +4,7 @@ require 'redis'
 module MongoMapper
   module Document
 
-    include ActiveModel::Serializers::JSON
+    # include ActiveModel::Serialization
 
     DUMP_ATTRS = [:@attributes] #, :@collection_proxies, :@loaded, :@persisted, :@record_collection]
 

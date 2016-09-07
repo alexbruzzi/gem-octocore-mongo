@@ -24,7 +24,7 @@ DESC
   s.has_rdoc    = true
   s.extra_rdoc_files = 'README.md'
 
-  s.required_ruby_version = '>= 2.0'
+  s.required_ruby_version = '>= 2.1.5'
 
   s.add_runtime_dependency 'redis', '~> 3.2.2', '>= 3.2.0'
   s.add_runtime_dependency 'redis-queue', '~> 0.0.4', '>= 0.0.4'
@@ -40,7 +40,7 @@ DESC
   s.add_runtime_dependency 'mandrill-api', '~> 1.0', '>= 1.0.53'
   s.add_runtime_dependency 'elasticsearch', '~> 1.0.17', '>= 1.0.17'
   s.add_runtime_dependency 'faraday', '~> 0.9.2', '>= 0.9.2'
-  s.add_runtime_dependency 'mongo_mapper', '~> 0.13.1', '>= 0.13.1'
+  s.add_runtime_dependency 'mongo_mapper', '~> 0.13.1'
   s.add_runtime_dependency 'bson_ext', '~> 1.12', '>= 1.12.5'
 
   s.add_development_dependency 'rspec', '~> 3.4.0', '>= 3.4.0'
