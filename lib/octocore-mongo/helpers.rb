@@ -1,0 +1,6 @@
+require 'octocore-mongo/helpers/api_helper'
+require 'octocore-mongo/helpers/api_logger'
+require 'octocore-mongo/helpers/api_consumer_helper'
+require 'octocore-mongo/helpers/client_helper'
+require 'octocore-mongo/helpers/kong_helper'
+require 'octocore-mongo/helpers/sinatra_helper'

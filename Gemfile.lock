@@ -1,7 +1,9 @@
 PATH
   remote: .
   specs:
-    octocore (0.0.6)
+    octocore-mongo (0.0.6)
+      active_model_serializers (~> 0.9.5, >= 0.9.5)
+      activemodel-serializers-xml (~> 1.0.1, >= 1.0.1)
       bson_ext (~> 1.12, >= 1.12.5)
       descriptive_statistics (~> 2.5.1, >= 2.5.0)
       elasticsearch (~> 1.0.17, >= 1.0.17)
@@ -22,19 +24,30 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    activemodel (4.2.7.1)
-      activesupport (= 4.2.7.1)
+    active_model_serializers (0.9.5)
+      activemodel (>= 3.2)
+    activemodel (5.0.0.1)
+      activesupport (= 5.0.0.1)
+    activemodel-serializers-xml (1.0.1)
+      activemodel (> 5.x)
+      activerecord (> 5.x)
+      activesupport (> 5.x)
       builder (~> 3.1)
-    activesupport (4.2.7.1)
+    activerecord (5.0.0.1)
+      activemodel (= 5.0.0.1)
+      activesupport (= 5.0.0.1)
+      arel (~> 7.0)
+    activesupport (5.0.0.1)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
-      json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
-      thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    arel (7.1.1)
     bson (1.12.5)
     bson_ext (1.12.5)
       bson (~> 1.12.5)
     builder (3.2.2)
+    concurrent-ruby (1.0.2)
     descriptive_statistics (2.5.1)
     diff-lcs (1.2.5)
     elasticsearch (1.0.18)
@@ -97,7 +110,7 @@ GEM
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
       rspec-mocks (~> 3.5.0)
-    rspec-core (3.5.2)
+    rspec-core (3.5.3)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -125,7 +138,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  octocore!
+  octocore-mongo!
   parallel_tests (~> 2.5.0, >= 2.5.0)
   rake
   rspec
+
+RUBY VERSION
+   ruby 2.2.2p95
+
+BUNDLED WITH
+   1.13.0
